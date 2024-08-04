@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="#">Vivek Chavda</a>
+      </div>
+      <div class="navbar-toggle" id="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="navbar-nav" id="navbar-nav">
+        <li class="nav-item"><a href="#home">Home</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#skills">Skills</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="home-section">
+      <div class="grp">
+        <h1>
+          Hi, I am <span class="animated-name">Vivek Chavda</span> <br />
+          A Front-End Developer
+        </h1>
+        <div class="icons">
+          <a href="https://github.com/vdchavda6060" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/vivek-chavda-70051529b"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div class="img">
+        <img src="profile.jpg" alt="profile pic" />
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="header">About Me</h2>
+      <div class="container">
+        <p class="about-me">
+          As a MCA student with a passion for frontend development, I specialize
+          in HTML, CSS, JavaScript, and frameworks like React. I've worked on
+          projects that emphasize responsive design and user experience. Eager
+          to apply my skills in real-world projects and collaborate with
+          professionals in the field.
+        </p>
+        <div class="download">
+          <a href="#">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="skill" id="skills">
+      <div class="skills">
+        <h2>Skills</h2>
+        <div class="wrapper">
+          <div>
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-python"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-github"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-git-alt"></i>
+          </div>
+          <div>
+            <i class="fab fa-php"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-java"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="form-container">
+        <?php if ($successMessage): ?>
+        <p class="success-message"><?php echo $successMessage; ?></p>
+        <?php endif; ?>
+        <?php if ($errorMessage): ?>
+        <p class="error-message"><?php echo $errorMessage; ?></p>
+        <?php endif; ?>
+
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="d0057df8-0cfe-4661-9acb-ed7bad0abdd0">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <p>&copy All rights reserved.</p>
+      </div>
+      <div class="footer-icon">
+        <a href="https://www.instagram.com/__vivek__6060/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/CALLMEAC4" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://t.me/vivek_6060" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://wa.me/8140191260" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
